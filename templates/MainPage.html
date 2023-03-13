@@ -1,0 +1,14 @@
+{% extends "InfernoMusic_base.html" %}
+
+{% block content %}
+<div>
+    <form class="download" method="post" enctype="multipart/form-data">
+        <img width="150" src="{{ url_for('static', filename='image/logo.png') }}">
+        <p class="h2" id="registration_title">{{ description }}</p>
+        <div class="download_button_div">
+            <button type="submit" class="btn btn-secondary">Скачать {{ version }}</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

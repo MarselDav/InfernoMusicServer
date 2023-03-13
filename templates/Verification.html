@@ -1,0 +1,35 @@
+{% extends "InfernoMusic_base.html" %}
+
+{% block content %}
+<div>
+    <form class="form" method="post" enctype="multipart/form-data">
+        <p class="h2 text-white">{{ content['verify'] }}</p>
+        <p class="h5 text-white">{{ content['verify_message1'] }} {{ email }} <br/> {{ content['verify_message2'] }}</p>
+      <script>
+        function testJump(x){
+            var ml = ~~x.getAttribute('maxlength');
+            if(ml && x.value.length >= ml){
+                do{
+                    x = x.nextSibling;
+                }
+                while(x && !(/text/.test(x.type)));
+                if(x && /text/.test(x.type)){
+                    x.focus();
+                }
+            }
+        }
+      </script>
+      <div class="code-container">
+        <input name="1" type="text" onkeyup="testJump(this);" class="code" placeholder="0" maxlength="1" required>
+        <input name="2" type="text" onkeyup="testJump(this);" class="code" placeholder="0" maxlength="1" required>
+        <input name="3" type="text" onkeyup="testJump(this);" class="code" placeholder="0" maxlength="1" required>
+        <input name="4" type="text" onkeyup="testJump(this);" class="code" placeholder="0" maxlength="1" required>
+        <input name="5" type="text" onkeyup="testJump(this);" class="code" placeholder="0" maxlength="1" required>
+        <input name="6" type="text" onkeyup="testJump(this);" class="code" placeholder="0" maxlength="1" required>
+      </div>
+        <div id="passwordError" class="form-text text-danger">{{ error }}</div>
+        <button type="submit" class="btn btn-dark" style="width: 100%; height: 50px;">{{ content['send'] }}</button>
+    </form>
+</div>
+
+{% endblock %}

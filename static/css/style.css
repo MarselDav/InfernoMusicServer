@@ -1,0 +1,70 @@
+body {
+    background-color: rgb(30, 30, 30);
+}
+
+.download_button_div {
+    margin: 30px;;
+}
+
+#accdropdown
+{
+    margin-right: 30px;
+}
+
+form.form {
+    text-align: center;
+    margin: 10% auto;
+    width: 40%;
+    box-shadow: 4px 4px 8px 4px rgba(20, 20, 20, 0.2);
+    background-color: rgb(17, 17, 17);
+    padding: 25px 25px 20px 20px;
+    border-radius: 10px;
+}
+
+form.download {
+    text-align: center;
+    margin: 10% auto;
+    padding: 25px 25px 20px 20px;
+}
+
+.code {
+  border-radius: 5px;
+  font-size: 75px;
+  height: 100px;
+  width: 16%;
+  border: 1px solid #eee;
+    outline-width: thin;;
+    outline-color: #ddd;
+  margin: 1%;
+  text-align: center;
+  font-weight: 300;
+  -moz-appearance: textfield;
+  margin-left: 10px;
+}
+
+.code-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+
+}
+
+#registration_title {
+    padding: 0 0 40px 0;
+    color: white;
+}
+
+.line_edit {
+    color: white;
+    width: 100%;
+    margin: 100 100 100 100;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.line_edit:focus  {
+    border-bottom: 1px solid white;
+}

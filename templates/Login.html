@@ -1,0 +1,23 @@
+{% extends "InfernoMusic_base.html" %}
+
+{% block content %}
+<div>
+    <form class="form" method="post" enctype="multipart/form-data">
+        <p class="h2" id="registration_title">{{ content['login_title'] }}</p>
+        <div class="form-floating mb-4">
+          <input value="{{ input_values['email'] }}" name="email" type="email" class="form-control text-white" style="background: rgba(0, 0, 0, 0); border: 1px solid grey;" id="floatingEmail" placeholder="name@example.com">
+          <label style="color: grey;" for="floatingEmail">{{ content['email'] }}</label>
+        </div>
+
+        <div id="emailError" class="form-text text-danger">{{ error }}</div>
+
+        <div class="form-floating mb-4">
+          <input value="{{ input_values['password'] }}" name="password" type="password" class="form-control text-white" style="background: rgba(0, 0, 0, 0); border: 1px solid grey;" id="floatingPassword" placeholder="Пароль">
+          <label style="color: grey;" for="floatingEmail">{{ content['password'] }}</label>
+        </div>
+
+        <button type="submit" class="btn btn-dark" style="width: 100%; height: 50px;">{{ content['login'] }}</button>
+    </form>
+</div>
+
+{% endblock %}
